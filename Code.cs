@@ -1,6 +1,7 @@
 ﻿// TODO: Write out purchase functions (random name, random verb, random fail-to-purchase)
 // TODO: Kickstarter Backer Reward - Bonus Adventures
 // TODO: Halt Production option
+// TODO: Add human-readable comments
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace FV1
     class Program
     {
         public static int majorversion = 1;
-        public static int minorversion = 55;
+        public static int minorversion = 61;
         public static int lastRand = -1;
         public static bool challengeMode = false;
 
@@ -28,7 +29,7 @@ namespace FV1
         				} break;
         			case 1:
         				{
-        					System.Console.WriteLine("Another potion mixed, flavored and seasoned by " + StoreData.pGuy + "!");
+        					System.Console.WriteLine("Another set of Gelatinous Glassware created by " + StoreData.pGuy + "!");
         				} break;
         			case 2:
         				{
@@ -40,7 +41,7 @@ namespace FV1
         				} break;
         			case 4:
         				{
-        					System.Console.WriteLine(StoreData.pGuy + " cans a fresh potion!");
+        					System.Console.WriteLine(StoreData.pGuy + " whips up a set of Komodo Dragon Saliva Lip Gloss!");
         				} break;
         			case 5:
         				{
@@ -136,7 +137,7 @@ namespace FV1
         				} break;
         			case 28:
         				{
-        					System.Console.WriteLine("Stirring feverishly, " + StoreData.pGuy + " has a serious temperature above 101 degrees!\n  You'll sell the new potion anyway.");
+        					System.Console.WriteLine("Stirring feverishly, " + StoreData.pGuy + " has a serious temperature\n   above 101 degrees!\n  You'll sell the new potion anyway.");
         				} break;
         			case 29:
         				{
@@ -361,7 +362,7 @@ namespace FV1
         				} break;
         			case 5:
         				{
-        					System.Console.WriteLine(StoreData.wGuy + " drops a fresh beat! \n  And by 'beat,' I mean 'weapon.'\n    And by 'drop' I mean 'crafts.'");
+        					System.Console.WriteLine(StoreData.wGuy + " drops a fresh beat! \n  And by 'beat,' I mean 'weapon.'\n    And by 'drop' I mean 'crafts.'\n       Specifically, they're an Earth-616 Lot of 7 Infinity Gems.");
         				} break;
         			case 6:
         				{
@@ -381,7 +382,7 @@ namespace FV1
         				} break;
         			case 10:
         				{
-        					System.Console.WriteLine(StoreData.wGuy + " forges a\n  Fancy Intermediate Sword of Variable Length.");
+        					System.Console.WriteLine(StoreData.wGuy + " forges an\n  epic item -- the hallowed Sword of Nutt.\n    You're not sure if this counts as forgery.");
         				} break;
         			case 11:
         				{
@@ -662,7 +663,7 @@ namespace FV1
         				} break;
         			case 1:
         				{
-        					System.Console.WriteLine("Another fancy improbable beast found and captured by\n  " + StoreData.sGuy + "! Very useful for riding.\n    You suppose.");
+        					System.Console.WriteLine("The Head of Vecna was captured by\n  " + StoreData.sGuy + "! Very useful for riding.\n    You suppose.");
         				} break;
         			case 2:
         				{
@@ -670,7 +671,7 @@ namespace FV1
         				} break;        			
         			case 3:
         				{
-        					System.Console.WriteLine(StoreData.sGuy + " captured a\n  +" + StoreData.sLevel + " Elemental Polecat of Expert Riding!\n    How... unusual.");
+        					System.Console.WriteLine(StoreData.sGuy + " captured\n  Alison's Unicorn-Knitted Mustached Potato-Eating Turtle-Cat!\n    How... unusual.");
         				} break;
         			case 4:
         				{
@@ -758,7 +759,7 @@ namespace FV1
         				} break;
         			case 25:
         				{
-        					System.Console.WriteLine(StoreData.sGuy + " acquires a\n  Miniature Cornish Dragon with Exhaust Stylings and Bitchin' flames\n    painted on the side.");
+        					System.Console.WriteLine(StoreData.sGuy + " acquires a\n  Miniature Cornish Dragon with Exhaust Stylings and Hella Sweet flames\n    painted on the side.");
         				} break;
         			case 26:
         				{
@@ -1061,7 +1062,7 @@ namespace FV1
         		 		sentence += "doesn't even buy anything! What a rip.";
         		 		break;
         		 	case 5:
-        		 		sentence += "left before you could ask what was needful. Probably wasn't going to buy, anyway...";
+        		 		sentence += "left before you could ask what was needful.\n    Probably wasn't going to buy, anyway...";
         		 		break;
         		 	case 6:
         		 		sentence += "already made purchases across town. You're not surprised at the NO SALE.";
@@ -1225,13 +1226,16 @@ namespace FV1
         			"Your attempt to stifle sobs fails miserably.",
         			"\"I DON'T HAVE ANY, SHUT UP!\" You shout.",
         			"\"NOOOOOOOO!\" You adamantly proclaim.",
-        			"You heave a great sigh, and look in all the corners of the room.\n   If only you had that item in stock...",
+        			"You heave a great sigh, and look in all the corners of the room.\n   If only you had that in stock...",
         			"You really picked a hell of a week to quit drinking.",
         			"Just wait 'til the union hears about your lack of stock.",
         		};
             
             public static string[] steed = 
-			{ "a nifty Silvertaur!",
+			{
+			"Alison's Unicorn-Knitted Mustached Potato-Eating Turtle-Cat!",
+			"The Head of Vecna, inexplicably rideable.",			
+            "a nifty Silvertaur!",
 			"an improbable beast.",
 			"a real-io, cool-io, true-lio dragon.",
 			"an Elemental Polecat of Expert Riding!",
@@ -1280,7 +1284,10 @@ namespace FV1
 			}; // end string[] steed definition
             
             public static string[] weapon = 
-			{ "a Licorice Whip of Ultimate Comebacks.",
+			{ 
+            "the legendary Sword of Nutt.",
+			"Earth-616 Lot of 7 Infinity Gems --\n   Soul, Power, Time, Space, Mind, Reality and Ego.",            
+            "a Licorice Whip of Ultimate Comebacks.",
 			"some kind of pointy thing.",
 			"a Bag of Holding.",
 			"a Polesword of Silent Earth!",
@@ -1322,11 +1329,15 @@ namespace FV1
 			"a Generic Sword, Axe, Staff or Polearm.",
 			"a Tiny Swordstaff.",
 			"a Nicotine Axe of Potent Addiction.",
-			"a Creditsword."
+			"a Creditsword.",
+			"Komodo Dragon Saliva Lip Gloss."
 			}; // end string[] weapon definition
             
             public static string[] potion = 
-				{ "a tincture.",
+				{ 
+            	"a set of Gelatinous Glassware.",
+            	"Komodo Dragon Saliva Lip Gloss.",
+            	"a tincture.",
 				"a potion.",
 				"a bird-buttering potion!",
 				"a Potion of Ultimate Mediocrity!",
@@ -1389,7 +1400,7 @@ namespace FV1
         			"\"NO TAKEBACKS!\" You adamantly proclaim.",
         			"The day just seems to get weird around 3 PM.",
         			"Don't any of these people have jobs?",
-        			"There's no accounting for taste, but if there were this would be super costly.",
+        			"There's no accounting for taste,\n     but if there were this would be super costly.",
         			"They were probably underage, but you're not sure if it's legal either way.",
         			"Recklessly, you autograph it.",
         			"Wisely, you decide not to ruminate on why.",
@@ -1423,7 +1434,14 @@ namespace FV1
         		}; // end string[] verbs definition
         		
         		// 36 total names
-        		public static string[] customerName = { "Arisu ",
+        		public static string[] customerName = { 
+        			"Thifel Gimdek ",
+        			"Dudley the Squire ",
+        			"Cory Watson ",
+        			"Dimply Death Shade ",
+        			"Developer's Choice, the Non-Preferential ",
+        			"Kristen, Keeper of the Deluxe Edition ",
+        			"Arisu ",
         			"Byro ",
         			"Little Miss Crapplebottom ",
         			"Dr. Sleep ",
@@ -1457,7 +1475,7 @@ namespace FV1
         			"Mark ",
         			"Jim ",
         			"Janein ", // TODO: CHECK THIS FOR ACCURACY YOU DINGBAT
-        			"all of the wonderful Kickstarter backers\n  who assisted in the creation of this game ",
+        			"a group comprised of all the Kickstarter backers\n  who assisted in the creation of this game ",
         			"Bill the real-life statistical anomaly "
         		}; // end string[] name definition
         			
@@ -1675,8 +1693,14 @@ namespace FV1
             
             // THANK BACKERS from the KICKSTARTER. they were all VERY NICE AS FAR AS I KNOW
             System.Console.WriteLine("\n\n retronics would like to thank the following individuals,\n   groups, corporations, planets and all-around Cool Persons.\n");
-            System.Console.WriteLine("\nin no particular order:\n   Paul Friedman");
-            System.Console.ReadKey();
+            System.Console.WriteLine("\nin no particular order:\n\n\n   Paul Friedman\tDresden260\t  Mike Nutt\n");
+            System.Console.WriteLine(" Spencer Stantis' parents\t     Jordan Goldstein\n");
+            System.Console.WriteLine("   JC (not Christ)\tValtoro\t\tMattias Hansson\n");
+            System.Console.WriteLine(" Rochelle Roberts\tJohn Colagioia\t  Darcy Prior\n");
+            System.Console.WriteLine("   HermitFromPluto\tKristen\t\tVan Van Duong\n");
+            System.Console.WriteLine(" ~james~\tZhenglong\tLeokatz\t   Miles Matton\n");
+            System.Console.WriteLine("      and Joseph, the amazing god of all that is awesome");
+            System.Threading.Thread.Sleep(8000);
             System.Console.Clear();
             
             // select mode
@@ -1697,7 +1721,7 @@ namespace FV1
             bool done = false;
             do
             {
-                k = System.Console.ReadKey().Key;
+                k = System.Console.ReadKey(true).Key;
                 if(k == ConsoleKey.D1)
                 {
                     System.Console.Clear();
@@ -1776,12 +1800,12 @@ namespace FV1
             //  do a random encounter or skip
                 showStatus();
                 System.Console.WriteLine("\nHow will you spend the morning, before the store opens?\n");
-                System.Console.WriteLine("  1) Visit Forest of Perpetual Usefulness\n  2) Traverse the Elemental Plane of Weapons\n  3) Do a Sexy Prance to Attract Steeds\n  4) Buy Hookers and Blow\n\n");
-                System.Console.WriteLine("    The Forest is generally safe;\n    The Elemental Planes are sometimes dangerous;\n    Prancing can ruin your financial health;\n    Hookers and blow are always safe options. Just like in real life.");
+                System.Console.WriteLine("  1) Visit Forest of Perpetual Usefulness\n  2) Traverse the Elemental Plane of Weapons\n  3) Do a Sexy Prance to Attract Steeds\n  4) Visit the Hotel Vagabond\n\n");
+                System.Console.WriteLine("    The Forest is generally safe;\n    The Elemental Planes are sometimes dangerous;\n    Prancing can ruin your financial health;\n    The Hotel Vagabond is always safe. Just like in real life.");
                 bool ddone = false;
                 do
                 {
-                    k = System.Console.ReadKey().Key;
+                	k = System.Console.ReadKey(true).Key;
                     if (k == ConsoleKey.D1)
                     {
                         System.Console.Clear();
@@ -1965,7 +1989,7 @@ namespace FV1
                         }
                         else if (d < 50)
                         {
-                            System.Console.WriteLine("What the hell is an air elemental doing here?\n  You get the fuck out of there.\n");
+                            System.Console.WriteLine("What the hell is an air elemental doing here?\n  You get the out of there, sharpish.\n");
                         }
                         else if (d < 90)
                         {
@@ -1985,9 +2009,9 @@ namespace FV1
                             System.Console.WriteLine("    And today the King himself has shown up! He lavishes you with jewels.\n      This makes all the prior humiliation worth it!\n        Almost.");
                         }
                     } break;
-                case 3: // Hookers and Blow!
+                case 3: // A wasted morning... UNLESS YOU LIKE BEER. YAY BEER!
                     {
-                        System.Console.WriteLine("You spend your morning the traditional way.\n  Awash in prostitutes, cocaine, and cocaine-covered prostitutes.\n    It's all a marvelous blur.");
+                        System.Console.WriteLine("You spend your morning the traditional way.\n  Awash in ale, card games and ale-covered card games.\n    It's all a marvelous blur.");
                     } break;
                 default: System.Console.WriteLine(".error. You somehow had an invalid encounter.\n  I'm terribly sorry. Nothing happens. :(");
                     break;
