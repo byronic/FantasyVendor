@@ -1,5 +1,4 @@
-﻿// TODO: Write out purchase functions (random name, random verb, random fail-to-purchase)
-// TODO: Kickstarter Backer Reward - Bonus Adventures
+﻿// TODO: Kickstarter Backer Reward - Bonus Adventures
 // TODO: Halt Production option
 // TODO: Add human-readable comments
 using System;
@@ -13,7 +12,7 @@ namespace FV1
     class Program
     {
         public static int majorversion = 1;
-        public static int minorversion = 61;
+        public static int minorversion = 65;
         public static int lastRand = -1;
         public static bool challengeMode = false;
 
@@ -1722,42 +1721,42 @@ namespace FV1
             do
             {
                 k = System.Console.ReadKey(true).Key;
-                if(k == ConsoleKey.D1)
+                if(k == ConsoleKey.D1 || k == ConsoleKey.NumPad1)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Sorcelator be known?");
                     StoreData.pGuy = System.Console.ReadLine() + " the Sorcelator";
                     done = true;
                 }
-                if(k == ConsoleKey.D2)
+                if(k == ConsoleKey.D2 || k == ConsoleKey.NumPad2)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Calchemist be known?");
                     StoreData.pGuy = System.Console.ReadLine() + " the Calchemist";
                     done = true;
                 }
-                if(k == ConsoleKey.D3)
+                if(k == ConsoleKey.D3 || k == ConsoleKey.NumPad3)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Daggerman be known?");
                     StoreData.wGuy = System.Console.ReadLine() + " the Daggerman";
                     done = true;
                 }
-                if(k == ConsoleKey.D4)
+                if(k == ConsoleKey.D4 || k == ConsoleKey.NumPad4)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Murdilizer be known?");
                     StoreData.wGuy = System.Console.ReadLine() + " the Murdilizer";
                     done = true;
                 }
-                if(k == ConsoleKey.D5)
+                if(k == ConsoleKey.D5 || k == ConsoleKey.NumPad5)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Steed-dore be known?");
                     StoreData.sGuy = System.Console.ReadLine() + " the Steed-dore";
                     done = true;
                 }
-                if(k == ConsoleKey.D6)
+                if(k == ConsoleKey.D6 || k == ConsoleKey.NumPad6)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine( " And by what name will your Horsinator be known?");
@@ -1806,26 +1805,28 @@ namespace FV1
                 do
                 {
                 	k = System.Console.ReadKey(true).Key;
-                    if (k == ConsoleKey.D1)
+                    if (k == ConsoleKey.D1 || k == ConsoleKey.NumPad1)
                     {
                         System.Console.Clear();
                         doEncounter(0);
                         ddone = true;
                     }
-                    if (k == ConsoleKey.D2)
+                    if (k == ConsoleKey.D2 || k == ConsoleKey.NumPad2)
                     {
                         System.Console.Clear();
                         doEncounter(1);
-                        StoreData.wLevel++;
+                        // This bug is preserved here for posterity
+                        // StoreData.wLevel++;
+                        // Why did I ever write the above line?
                         ddone = true;
                     }
-                    if (k == ConsoleKey.D3)
+                    if (k == ConsoleKey.D3 || k == ConsoleKey.NumPad3)
                     {
                         System.Console.Clear();
                         doEncounter(2);
                         ddone = true;
                     }
-                    if (k == ConsoleKey.D4)
+                    if (k == ConsoleKey.D4 || k == ConsoleKey.NumPad4)
                     {
                         System.Console.Clear();
                         doEncounter(3);
@@ -1886,19 +1887,19 @@ namespace FV1
             do
             {
                 k = System.Console.ReadKey(true).Key;
-                if (k == ConsoleKey.D1 && StoreData.pGuy != "")
+                if ((k == ConsoleKey.D1 || k == ConsoleKey.NumPad1) && StoreData.pGuy != "")
                 {
                     System.Console.Clear();
                     StoreData.pLevel++;
                     done = true;
                 }
-                if (k == ConsoleKey.D2 && StoreData.wGuy != "")
+                if ((k == ConsoleKey.D2 || k == ConsoleKey.NumPad2) && StoreData.wGuy != "")
                 {
                     System.Console.Clear();
                     StoreData.wLevel++;
                     done = true;
                 }
-                if (k == ConsoleKey.D3 && StoreData.sGuy != "")
+                if ((k == ConsoleKey.D3 || k == ConsoleKey.NumPad3) && StoreData.sGuy != "")
                 {
                     System.Console.Clear();
                     StoreData.sLevel++;
@@ -1919,42 +1920,42 @@ namespace FV1
             do
             {
                 k = System.Console.ReadKey(true).Key;
-                if (k == ConsoleKey.D1)
+                if (k == ConsoleKey.D1 || k == ConsoleKey.NumPad1)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Sorcelator be known?");
                     StoreData.pGuy = System.Console.ReadLine() + " the Sorcelator";
                     done = true;
                 }
-                if (k == ConsoleKey.D2)
+                if (k == ConsoleKey.D2 || k == ConsoleKey.NumPad2)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Calchemist be known?");
                     StoreData.pGuy = System.Console.ReadLine() + " the Calchemist";
                     done = true;
                 }
-                if (k == ConsoleKey.D3)
+                if (k == ConsoleKey.D3 || k == ConsoleKey.NumPad3)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Daggerman be known?");
                     StoreData.wGuy = System.Console.ReadLine() + " the Daggerman";
                     done = true;
                 }
-                if (k == ConsoleKey.D4)
+                if (k == ConsoleKey.D4 || k == ConsoleKey.NumPad4)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Murdilizer be known?");
                     StoreData.wGuy = System.Console.ReadLine() + " the Murdilizer";
                     done = true;
                 }
-                if (k == ConsoleKey.D5)
+                if (k == ConsoleKey.D5 || k == ConsoleKey.NumPad5)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Steed-dore be known?");
                     StoreData.sGuy = System.Console.ReadLine() + " the Steed-dore";
                     done = true;
                 }
-                if (k == ConsoleKey.D6)
+                if (k == ConsoleKey.D6 || k == ConsoleKey.NumPad6)
                 {
                     System.Console.Clear();
                     System.Console.WriteLine(" And by what name will your Horsinator be known?");

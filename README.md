@@ -3,7 +3,7 @@ Fantasy Vendor
 
 Fantasy Vendor
 
-v1.61 README / FAQ
+v1.65 README / FAQ
 
 Table of Contents:
  0. Special Addition
@@ -41,6 +41,12 @@ II. FAQ
   But, if you're playing on Linux you probably already got started.
 
 III. Changes from Previous Version
+
+1.65 presents the following changes from previous versions:
+
+BUGFIXES:
+. Input from the number pad is now recognized
+. The Elemental Plane of Weaponry no longer automatically levels up the shop's weapon level.
 
 1.61 presents the following changes from previous version:
 
